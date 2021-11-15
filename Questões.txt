@@ -1,0 +1,18 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise? 
+- Muito se fala em cloud hoje e observando os pros e contras, acredito que se a empresa tiver o aporte inicial para investir em On-premise, essa é a melhor opção.
+    
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acredita ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil? 
+- Jira está em alta há um bom tempo por ser uma plataforma com diversas ferramentas para ajudar com o SCRUM ou outras metodologias então eu certamente escolheria essa
+    
+
+3. Você se sente capaz de liderar esta equipe? Por quê? 
+- Apesar de não possuir experiência, me sinto capaz, sim. Sempre tive que lidar com equipes no ensino médio e faculdade e sempre gostei de um bom desafio, além de que posso compensar minha pouca experiência com essa minha vontade superar desafios, crescer cada vez mais e de não ter vergonha de pedir ajuda sempre que necessário.
+  
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria? 
+- O desafio é bem completo e foi realmente desafiador.
+  
+
+5. Acha válido esse desafio para o processo que está participando? 
+- Com certeza, saber montar um banco de dados, buscar e enviar dados de uma api e usar autenticação são muito importantes.
