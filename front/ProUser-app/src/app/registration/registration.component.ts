@@ -17,19 +17,19 @@ export class RegistrationComponent{
     const data = {
       'username': form.value.username,
       'password': form.value.password,
-      'role': "",
+      'role': '',
       'primeiroNome': form.value.primeiroNome,
-      'últimoNome': form.value.últimoNome,
+      'últimoNome': form.value.ultimoNome,
       'email': form.value.email,
       'telefone': form.value.telefone,
-      'address': {
+      'address':{
         'cep': form.value.cep,
-        'logradouro': "",
+        'logradouro': '',
         'numero': form.value.numero,
-        'complemento': "",
-        'bairro': "",
-        'localidade': "",
-        'uf': "",
+        'complemento': '',
+        'bairro': '',
+        'localidade': '',
+        'uf': '',
       }
     }
 
@@ -37,9 +37,7 @@ export class RegistrationComponent{
         response=>{
           this.router.navigate(['login']);
         }, err => {
-          `<br>
-          <div class="alert alert-danger">Aconteceu algo de errado.</div>
-          <br>`
+          console.log(err)
         }
 
       );

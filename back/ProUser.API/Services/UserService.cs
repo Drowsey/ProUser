@@ -17,11 +17,6 @@ namespace ProUser.Services
             _users = database.GetCollection<User>(settings.UsersCollectionName);
         }
 
-        public List<User> GetUser(){
-            var users = _users.Find(x => true).ToList();
-            return users;
-        }
-
         public User GetUser(string username){
             return _users.Find(x => x.Username.ToLower() == username.ToLower()).FirstOrDefault();
         }
@@ -31,12 +26,6 @@ namespace ProUser.Services
             _users.InsertOne(user);
             return user;
         }
-
-        public void Update(string username, User user){
-            _users.ReplaceOne(x => x.Username.ToLower() == username.ToLower(), user);
-            
-        }
-
 
         public void Delete(string username){
             _users.DeleteOne(x => x.Username.ToLower() == username.ToLower());
