@@ -14,7 +14,18 @@ export class RegistrationComponent{
   constructor(private http:HttpClient, private router:Router) { }
 
   public registerUser(form: NgForm){
-    const data = {
+
+    const addressData={
+        'cep': form.value.cep,
+        'logradouro': '',
+        'numero': form.value.numero,
+        'complemento': '',
+        'bairro': '',
+        'localidade': '',
+        'uf': ''
+    }
+
+    const user = {
       'username': form.value.username,
       'password': form.value.password,
       'role': '',
@@ -22,25 +33,17 @@ export class RegistrationComponent{
       'últimoNome': form.value.ultimoNome,
       'email': form.value.email,
       'telefone': form.value.telefone,
-      'address':{
-        'cep': form.value.cep,
-        'logradouro': '',
-        'numero': form.value.numero,
-        'complemento': '',
-        'bairro': '',
-        'localidade': '',
-        'uf': '',
-      }
+      'address' : addressData
     }
 
-      this.http.post("https://localhost:5001/ProUser/create", data).subscribe(
-        response=>{
-          this.router.navigate(['login']);
-        }, err => {
-          console.log(err)
-        }
-
-      );
+    this.http.post("https://localhost:5001/ProUser/create", user)
+      .subscribe( response => {
+        this.router.navigate(['login']);
+      }, err => {
+        console.log(err);
+      }
+    );
   }
-
 }
+
+

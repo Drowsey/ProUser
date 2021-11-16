@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent{
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   public isUserAuthenticated(){
     const token = localStorage.getItem("jwt");
@@ -23,5 +24,11 @@ export class HomeComponent{
     localStorage.removeItem("jwt");
     this.router.navigate(["login"]);
   }
+
+  public openWhatsapp(){
+    this.http.get("https://localhost:5001/ProUser/whatsapp").subscribe()
+
+  }
+
 
 }

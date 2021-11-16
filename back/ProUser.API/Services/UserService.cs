@@ -34,7 +34,7 @@ namespace ProUser.Services
         public bool IsEmailUsed(string email){
             var user = _users.Find(x => x.Email.ToLower() == email.ToLower()).FirstOrDefault();
 
-            return (user == null);
+            return !(user == null);
         }
 
         public string GetPassword(string username){
